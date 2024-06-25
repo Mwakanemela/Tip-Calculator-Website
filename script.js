@@ -17,10 +17,21 @@ These are all the DIV ID's you're gonna need access to 👇
 #4 ID 👉 'perPersonTotal' = Total dollar value owed per person
 */
 
+const billTotalInput = document.getElementById('billTotalInput')
+const tipInput = document.getElementById('tipInput')
+const numberOfPeopleDiv = document.getElementById('numberOfPeople')
+const perPersonTotalDiv = document.getElementById('perPersonTotal')
+
 // Get global access to all inputs / divs here (you'll need them later 😘)
 // bill input, tip input, number of people div, and per person total div
 
+let billInputs = tipInput.value 
+let tipInputs = tipInput.value
+let numberOfPeople = Number(numberOfPeopleDiv.innerText)
+let perPersonTotal = Number(perPersonTotalDiv.innerText)
 
+
+// console.log(`billInputs: ${billInputs} tippInputs: ${tipInputs} numberOfPeople: ${numberOfPeople} perPersonTotal: ${perPersonTotal}`)
 
 // Get number of people from number of people div
 
@@ -28,10 +39,11 @@ These are all the DIV ID's you're gonna need access to 👇
 // ** Calculate the total bill per person **
 const calculateBill = () => {
   // get bill from user input & convert it into a number
-
-
+  let bill = Number(billTotalInput.value)
+  
+  console.log(bill)
   // get the tip from user & convert it into a percentage (divide by 100)
-
+  
 
   // get the total tip amount
 
