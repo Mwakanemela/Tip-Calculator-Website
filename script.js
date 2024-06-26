@@ -25,7 +25,7 @@ const perPersonTotalDiv = document.getElementById('perPersonTotal')
 // Get global access to all inputs / divs here (you'll need them later 😘)
 // bill input, tip input, number of people div, and per person total div
 
-let billInputs = tipInput.value 
+let billInputs = tipInput.value
 let tipInputs = tipInput.value
 let numberOfPeople = Number(numberOfPeopleDiv.innerText)
 let perPersonTotal = Number(perPersonTotalDiv.innerText)
@@ -40,7 +40,7 @@ let perPersonTotal = Number(perPersonTotalDiv.innerText)
 const calculateBill = () => {
   // get bill from user input & convert it into a number
   let bill = Number(billTotalInput.value)
-  
+
   // console.log(bill)
   // get the tip from user & convert it into a percentage (divide by 100)
   let tip = Number(tipInput.value) / 100
@@ -54,7 +54,8 @@ const calculateBill = () => {
   let perPersonTotal = total / numberOfPeople
 
   // update the perPersonTotal on DOM & show it to user
-  perPersonTotalDiv.innerText = `$${perPersonTotal.toFixed(2)}`
+  
+  perPersonTotalDiv.innerText = `K${perPersonTotal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
 }
 
 // ** Splits the bill between more people **
